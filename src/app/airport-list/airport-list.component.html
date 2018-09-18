@@ -1,0 +1,21 @@
+
+<table class="table table-hover" *ngIf="datalist.length > 0">
+  <thead>
+    <tr>
+      <th>Airport Code</th>
+      <th>Airport Name</th>
+      <th>City Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of datalist">
+      <td>{{item.airportCode}}</td>
+      <td>{{item.airportName}}</td>
+      <td>{{item.cityCode}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="bg-danger text-white" *ngIf="datalist.length === 0">
+   No Data
+</div>
